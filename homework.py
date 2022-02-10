@@ -16,7 +16,7 @@ class InfoMessage:
 
     def get_message(self) -> str:
 
-         return (f'Тип тренировки: {self.training_type}; '
+        return (f'Тип тренировки: {self.training_type}; '
                 f'Длительность: {self.duration:.3f} ч.; '
                 f'Дистанция: {self.distance:.3f} км; '
                 f'Ср. скорость: {self.speed:.3f} км/ч; '
@@ -39,7 +39,7 @@ class Training:
     LEN_STEP: float = 0.65
     M_IN_KM: int = 1000
     training_name: str = 'Training'
-    
+
     def get_distance(self) -> float:
         """Получить дистанцию в км."""
 
@@ -87,7 +87,7 @@ class SportsWalking(Training):
     """Тренировка: спортивная ходьба."""
 
     training_name: str = 'SportsWalking'
-    
+
     def __init__(self,
                  action: int,
                  duration: float,
@@ -164,6 +164,7 @@ def main(training: Training) -> None:
 
     info = InfoMessage.get_message(training.show_training_info())
     print(info)
+
 
 training: Training = Training
 
