@@ -134,7 +134,7 @@ def read_package(workout_type: str, data: list) -> Training:
         result = workout[workout_type](*data)
         return result
     else:
-        return(f'Неизвестный вид тренировки')
+        return('Неизвестный вид тренировки')
 
 
 def main(training: Training) -> None:
